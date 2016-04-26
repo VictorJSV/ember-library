@@ -1,0 +1,7 @@
+<h1>{{model.title}} <small>by: {{model.author}} </small></h1>
+<img src="{{model.image}}" alt="{{model.title}}" class="img-thumbnail">
+
+{{#link-to "books.edit" model class="btn btn-primary"}} Edit book {{/link-to}}
+<button class="btn btn-danger" {{action "deleteBook" model}}> Delete book </button>
+
+{{outlet}}

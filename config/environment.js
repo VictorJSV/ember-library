@@ -4,6 +4,13 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'library',
     environment: environment,
+    //contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'frame-src': "'self' https://*.firebaseio.com",
+      'script-src': "'self' 'unsafe-eval' https://*.firebaseio.com"
+    },
+    firebase: 'https://crackling-torch-81.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
